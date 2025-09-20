@@ -1,0 +1,244 @@
+<section class="home-teams">
+  <div class="teams-title">
+    <h2>Our team</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="container-teams">
+    <div class="team-card">
+      <img src="../../src/images/team1.png" alt="Leslie Alexander">
+      <div class="team-index">
+        <h3>Leslie Alexander</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse varius enim in eros elementum tristique.
+        </p>
+        <div class="team-sns">
+          <a href="https://www.linkedin.com/">
+            <img src="../../src/images/linkdin-logo.png" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/">
+            <img src="../../src/images/twitte-logo.png" alt="Twitter">
+          </a>
+          <a href="https://dribbble.com/">
+            <img src="../../src/images/dribble-logo.png" alt="Dribbble">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="../../src/images/team2.png" alt="Ralph Edwards">
+      <div class="team-index">
+        <h3>Ralph Edwards</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse varius enim in eros elementum tristique.
+        </p>
+        <div class="team-sns">
+          <a href="https://www.linkedin.com/">
+            <img src="../../src/images/linkdin-logo.png" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/">
+            <img src="../../src/images/twitte-logo.png" alt="Twitter">
+          </a>
+          <a href="https://dribbble.com/">
+            <img src="../../src/images/dribble-logo.png" alt="Dribbble">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="../../src/images/team3.png" alt="Annette Black">
+      <div class="team-index">
+        <h3>Annette Black</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse varius enim in eros elementum tristique.
+        </p>
+        <div class="team-sns">
+          <a href="https://www.linkedin.com/">
+            <img src="../../src/images/linkdin-logo.png" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/">
+            <img src="../../src/images/twitte-logo.png" alt="Twitter">
+          </a>
+          <a href="https://dribbble.com/">
+            <img src="../../src/images/dribble-logo.png" alt="Dribbble">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card extra-teams">
+      <img src="../../src/images/team4.png" alt="Savannah Nguyen">
+      <div class="team-index">
+        <h3>Savannah Nguyen</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse varius enim in eros elementum tristique.
+        </p>
+        <div class="team-sns">
+          <a href="https://www.linkedin.com/">
+            <img src="../../src/images/linkdin-logo.png" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/">
+            <img src="../../src/images/twitte-logo.png" alt="Twitter">
+          </a>
+          <a href="https://dribbble.com/">
+            <img src="../../src/images/dribble-logo.png" alt="Dribbble">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="view-teams">View all</button>
+</section>
+
+<style>
+.home-teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 112px 96px 112px 64px;
+}
+
+.teams-title h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.teams-title p {
+  font-size: 18px;
+}
+
+.container-teams {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 64px;
+  margin-top: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: start;
+
+  width: 100%; 
+  max-width: 608px;
+  height: auto;
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 288px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-index h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.team-index p {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.team-sns {
+  display: flex;
+  gap: 14px;
+}
+
+.team-sns img {
+  width: 24px;
+  height: 24px;
+}
+
+  .view-teams{
+    display: none;
+  }
+
+
+  @media (max-width: 885px) {
+    .home-teams {
+      padding: 48px 24px;
+    }
+.container-teams {
+  grid-template-columns: repeat(1, 1fr);
+    }
+
+ .team-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 486px;
+  justify-content:center;
+  text-align:center;
+  gap: 0;
+}
+
+.team-sns {
+    justify-content:center;
+    }
+
+.team-index {
+   padding: 32px 44px;
+}
+
+  .view-teams{
+    display: block;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    padding: 12px 162px;
+    border-radius: 12px;
+  }
+
+  .extra-teams{
+    display: none;
+  }
+
+  }
+</style>
+
+<script>
+const button_teams = document.querySelector(".view-teams");
+const extra_teams = document.querySelectorAll(".extra-teams");
+
+let isExpanded = false
+
+const updateView = () =>{
+    if (window.innerWidth < 768 && !isExpanded) {
+        extra_teams.forEach(card => card.style.display = "none");
+        button_teams.textContent = "View All"
+    } else {
+        extra_teams.forEach(card => card.style.display = "flex");
+        button_teams.textContent = "View less"
+    }
+}
+
+updateView();
+
+button_teams?.addEventListener("click", function () {
+    isExpanded = !isExpanded;
+    updateView();
+});
+
+window.addEventListener("resize", () => {
+    updateView();
+});
+
+</script>

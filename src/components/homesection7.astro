@@ -1,0 +1,41 @@
+<div class="homesection7-container">
+    <div class="text-wrap">
+        <h1>Subscribe to our newsletter</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <form class="subscribe-form" action="/" method="post">
+                <input 
+                    type="text" 
+                    class="subscribe-text-form" 
+                    id="email" 
+                    name="email" 
+                    placeholder="enter your email" 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+                    title="Please enter a valid email address (example@domain.com)." 
+                    required
+                >
+                <input type="submit" class="subscribe-submit-btn" value="Sign up">
+            </form>
+            <a href="/request" class="homesection7-request-btn">Request A Quote</a>
+        <p>By clicking Sign Up you're confirming that you agree with our Terms and Conditions.</p>
+    </div>
+</div>
+
+
+
+<script>
+    const subscribeInput = document.querySelector(".subscribe-text-form");
+    const subscribesubmitBtn = document.querySelector(".subscribe-submit-btn");
+
+subscribesubmitBtn?.addEventListener("click", () => {
+
+    const email = subscribeInput.value;    
+    const emailRegex = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
+
+    if (emailRegex.test(email)) {
+        alert("Subscription complete.");
+    } else {
+        alert("Please enter a valid email address (example@domain.com).");
+    }
+});
+
+</script>

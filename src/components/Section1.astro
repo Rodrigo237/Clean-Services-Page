@@ -1,0 +1,81 @@
+---
+import { effect } from "astro:schema";
+---
+<section class="section1">
+		<div class="section1-container">
+			<div class="section1-title">
+			<h1>A Clean Home,<br> A Happy Life,<br> Let Us Handle the Dirty Work!</h1>
+			<p>We develop innovative design solutions that enable our clients to enhance their competitive advantage.</p>
+			<div class="section1-buttons">
+				<button class="btn-index section-btnRequest">Request A Quote</button>
+				<button class="btn-index section-btnLearn">Learn More</button>
+			</div>
+			</div>
+			<div class="section1-imgContent">
+				<img src="../../src/images/plomerIndex.jpg" alt="">
+			</div>
+		</div>
+		<form class="section1-form" action="/">
+			<div class="form-fields">
+				<div class="field-card">	
+					<label for="fullName">Full Name</label>
+					<input type="text" id="fullNameIndex" required>
+				</div>
+				<div class="field-card">		
+					<label for="phoneNumber">Phone Number</label>
+					<input type="number" id="phoneNumberIndex"  maxlength="10" pattern="[0-9]{10}" required>
+				</div>
+				<div class="field-card">		
+					<label for="commentIndex">Comment</label>
+					<textarea id="commentsIndex" required></textarea>
+				</div>
+				<button type="button" class="btnRequest-index">Request A Quote</button>
+			</div>
+		</form>
+</section>
+
+
+<script is:inline>
+
+	const request_btn = document.querySelector(".section-btnRequest");
+	const fullName = document.getElementById("fullNameIndex");
+	const phoneNumber = document.getElementById("phoneNumberIndex");
+	const comment = document.getElementById("commentsIndex");
+	const form_btn = document.querySelector(".btnRequest-index");
+
+	request_btn?.addEventListener("click",function(){
+		window.location.href = "/request"
+	});
+
+	form_btn?.addEventListener("click",function(e){
+		e.preventDefault();
+		let isValid = true;
+
+		if(fullName.value.trim() === ""){
+			fullName.classList.add("error");
+			isValid = false;
+		}else{
+			fullName.classList.remove("error")
+		}
+		if (!phoneNumber || !phoneNumber.value.trim()) {
+      		phoneNumber.classList.add("error");
+      		isValid = false;
+    	} else {
+      		phoneNumber.classList.remove("error");
+    	}
+
+		if (comment.value.trim() === "") {
+      		comment.classList.add("error");
+      		isValid = false;
+    	} else {
+      		comment.classList.remove("error");
+    	}
+
+    	if (isValid) {
+      		 alert("Form submitted successfully!");	 
+  			fullName.value = "";
+  			phoneNumber.value = "";
+  			comment.value = "";
+    	}
+	});
+</script>

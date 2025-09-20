@@ -1,0 +1,140 @@
+<div class="request-container">
+    <div class="request-section">
+        
+        <div class="left-section">
+            <div class="text-section">
+                <p><strong>Contact Us</strong></p>
+                <h2>Request a quote</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+
+            <div class="form-section">
+                <form action="/">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="username">Full name</label>
+                            <input type="text" id="username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phonenumber">Phone number</label>
+                            <input type="text" id="phonenumber">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="services">Select service</label>
+                            <select name="services" id="services">
+                                <option value="" disabled selected></option>
+                                <option value="service1">Service1</option>
+                                <option value="service2">Service2</option>
+                                <option value="service3">Service3</option>
+                                <option value="service4">Service4</option>
+                                <option value="service5">Service5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-time">Select tiem</label>
+                            <!--<input type="time" id="user-time">-->
+                            <select id="user-time" name="user-time">
+                                <option value="" disabled selected></option>
+                                <option value="00:00">00:00</option>
+                                <option value="01:00">01:00</option>
+                                <option value="02:00">02:00</option>
+                                <option value="03:00">03:00</option>
+                                <option value="04:00">04:00</option>
+                                <option value="05:00">05:00</option>
+                                <option value="06:00">06:00</option>
+                                <option value="07:00">07:00</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
+                                <option value="24:00">24:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="15" cols="40"> Type your message</textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" name="accept" class="form-checkbox" id="accept"> 
+                            <label for="accept">I accept the <u>Teams</u></label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="submit" class="form-submit-btn" value="Submit">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="img-wrapper">
+                <img src="../../src/images/request-Image.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const formUserName = document.querySelector("#username");
+const formUserPhoneNumber = document.querySelector("#phonenumber");
+const formServices = document.querySelector("#services");
+const formUserTime = document.querySelector("#user-time");
+const formMessage = document.querySelector("#message");
+const formCheckbox = document.querySelector("#accept");
+const formsubmitBtn = document.querySelector(".form-submit-btn");
+
+formsubmitBtn?.addEventListener("click", (e) => {
+    e.preventDefault(); 
+
+    const phone = formUserPhoneNumber.value;
+    const isValidPhone = phone.trim() !== "" && phone.length >= 10;
+    const isValidService = formServices.value !== "";
+
+    const isValid = 
+        formUserName.value.trim() !== "" &&
+        isValidPhone &&
+        formUserTime.value.trim() !== "" &&
+        formMessage.value.trim() !== "" &&
+        isValidService &&
+        formCheckbox.checked;
+
+    if (isValid) {
+        alert(`
+            UserName: ${formUserName.value}
+            Phone number: ${formUserPhoneNumber.value}
+            Service: ${formServices.value}
+            Time: ${formUserTime.value}
+            Message: ${formMessage.value}
+            Form submitted successfully!
+        `);
+    } else {
+        alert("Please fill out all fields correctly and agree to the terms.");
+    }
+});
+</script>

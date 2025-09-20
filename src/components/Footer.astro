@@ -1,0 +1,135 @@
+<footer>
+    <div class="footer-container">
+        <div class="footer-first-section">
+            <div class="logo">
+                <img src="../../src/images/header-logo.png" alt="Logo">
+            </div>
+            <p class="footer-intro-first">
+                    Join our newsletter to stay up to date on features and releases.
+                </p>
+
+                <form class="eamil-form" action="/" method="post">
+                    <input 
+                        type="text" 
+                        class="eamil-text-form" 
+                        id="email" 
+                        name="email" 
+                        placeholder="enter your email" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+                        title="Please enter a valid email address (example@domain.com)." 
+                        required
+                    >
+                    <input type="submit" class="eamil-submit-btn" value="Subscribe">
+                </form>
+
+                <p class="footer-intro-second">
+                    By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
+                </p>
+        </div>
+
+        <div class="footer-second-section">
+            <nav>
+                <menu>
+                    <p><strong>About Us</strong> </p>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/request">Request A Quote</a></li>
+                </menu>
+            </nav>
+        </div>
+        
+        <div class="footer-third-section">
+            <nav>
+                <menu>
+                    <p><strong>Services</strong> </p>
+                    <li><a href="#">Window</a></li>
+                    <li><a href="#">Residential</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Apartment</a></li>
+                    <li><a href="#">Residential</a></li>
+                </menu>
+            </nav>
+        </div>
+
+        <div class="footer-fourth-section">
+            <nav>
+                <menu>
+                    <p><strong>Follow Us</strong> </p>
+                    <li><a href="https://www.facebook.com/"> <img src="../../src/images/facabook-icon.png" alt=""> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/"><img src="../../src/images/insta-logo.png" alt="">Instagram</a></li>
+                    <li><a href="https://x.com/"><img src="../../src/images/twitte-logo.png" alt="">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="../../src/images/linkdin-logo.png" alt="">Linkin</a></li>
+                </menu>
+            </nav>
+        </div>    
+    </div>
+
+    <div class="second-footer">
+        <div class="copyright">
+            2025 Ddsgnr. All right reserved.
+        </div>
+        <nav>
+            <menu>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Settings</a></li>
+            </menu>
+        </nav>
+    </div>
+
+    <div class="mobile-footer">
+        <div class="mobile-first-footer">
+            <div class="logo"><img src="../../src/images/header-logo.png" alt="Logo"></div>
+            <nav>
+                <menu>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/project">Project</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/services">Services</a></li>
+                </menu>
+            </nav>
+            <nav>
+                <menu>
+                    <div class="icons">
+                        <li><a href="https://www.facebook.com/"> <img src="../../src/images/facabook-icon.png" alt=""> </a></li>
+                        <li><a href="https://www.instagram.com/"><img src="../../src/images/insta-logo.png" alt=""></a></li>
+                        <li><a href="https://x.com/"><img src="../../src/images/twitte-logo.png" alt=""></a></li>
+                        <li><a href="https://www.linkedin.com/"><img src="../../src/images/linkdin-logo.png" alt=""></a></li>
+                    </div>
+                </menu>
+            </nav>
+        </div>
+
+        <div class="mobile-second-footer">
+            <div class="mobile-copyright">2025 Ddsgnr. All right reserved.</div>
+            <nav>
+                <menu>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                </menu>
+            </nav>
+        </div>
+        
+    </div>    
+</footer>
+
+<script>
+    const emailInput = document.querySelector(".eamil-text-form");
+    const submitBtn = document.querySelector(".eamil-submit-btn");
+
+submitBtn?.addEventListener("click", () => {
+
+    const email = emailInput.value;    
+    const emailRegex = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
+
+    if (emailRegex.test(email)) {
+        alert("Subscription complete.");
+    } else {
+        alert("Please enter a valid email address (example@domain.com).");
+    }
+});
+
+</script>

@@ -1,0 +1,101 @@
+---
+import aboutus from "../images/aboutus.png"
+---
+
+<section class="aboutus">
+    <div class="aboutus-container">
+        <div class="aboutus-intro">
+            <p>About Us</p>
+            <h1>Let us takecare of all your cleaning service needs.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.Lo</p>
+            <button onclick="location.href='/request'">Request A Quote</button>
+        </div>
+        <div class="aboutus-img">
+            <img src={aboutus.src} alt="">
+        </div>
+    </div>
+</section>
+
+
+<style>
+.aboutus-container {
+        display: flex;
+    justify-content: space-between;
+    padding: 112px 64px;
+    gap: 80px;
+  align-items: center;
+}
+
+.aboutus-intro {
+  width: 50%;
+  max-width: 616px;
+}
+
+.aboutus-intro h1 {
+    font-style: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.aboutus-intro p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.aboutus-intro p:last-of-type {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.aboutus-intro button {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 160px;
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.aboutus-img img{
+ width: 616px;
+ height: 640px;
+}
+
+@media (max-width: 768px) {
+    .aboutus {
+       margin: 0 24px;
+    }
+
+    .aboutus-intro {
+        width: 100%
+    }
+
+    .aboutus-img img {
+        min-width: 380px;
+        width:100%;
+        height: 360px;
+    }
+
+    .aboutus-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        margin-bottom: 48px;
+    }
+
+    .aboutus-intro h1 {
+        font-size: 32px;
+    }
+
+    .aboutus-intro {
+        margin: 48px 0;
+    }
+}
+</style>

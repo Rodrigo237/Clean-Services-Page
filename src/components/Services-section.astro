@@ -1,0 +1,70 @@
+
+<section class="home-services">
+		<div class="title-services">	
+			<h2>Our Services</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+		</div>
+		<div class="collage-services">
+				<div class="service-card">
+					<img src="../../src/images/onebedroom.jpg" alt="">
+					<h3>One Bedroom Apartment</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+				<div class="service-card">
+					<img src="../../src/images/windowcleaning.jpg" alt="">
+					<h3>Window Cleaning</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+				<div class="service-card">
+					<img src="../../src/images/residentialcleaning.jpg" alt="">
+					<h3>Residential Cleaning</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+				<div class="service-card extra-services">
+					<img src="../../src/images/constructioncleaning.jpg" alt="">
+					<h3>Construction Cleaning</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+				<div class="service-card extra-services">
+					<img src="../../src/images/commercialcleaning.jpg" alt="">
+					<h3>Commercial Cleaning</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+				<div class="service-card extra-services">
+					<img src="../../src/images/twobedroom.jpg" alt="">
+					<h3>Two Bedroom Apartment</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, labore.</p>
+				</div>
+		</div>
+		<div class="btn-container-view">
+			<button class="view-services">View all</button>
+		</div>
+	</section>
+
+<script is:inline>
+  const button_service = document.querySelector(".view-services");
+  const extra_services = document.querySelectorAll(".extra-services");
+
+    let isExpanded = false
+
+    const updateView = () =>{
+        if (window.innerWidth < 768 && !isExpanded) {
+            extra_services.forEach(card => card.style.display = "none");
+            button_service.textContent = "View All"
+        } else {
+            extra_services.forEach(card => card.style.display = "block");
+            button_service.textContent = "View less"
+        }
+    }
+
+    updateView();
+
+    button_service?.addEventListener("click", function () {
+        isExpanded = !isExpanded;
+        updateView();
+    });
+
+    window.addEventListener("resize", () => {
+        updateView();
+    });
+</script>
